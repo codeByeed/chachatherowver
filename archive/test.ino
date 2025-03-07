@@ -38,6 +38,12 @@ void testLoop() {
     moveForward(0, 0);
 
     switch (cmd) {
+        case 'f': // This is New
+            Serial.println("this work");
+            delay(3000);
+            chachaAlign(default_speed, default_speed);
+            // moveForwardByCms(120, 120, 10);
+            break;
         case 'a':
             spinAndScan();
             break;
@@ -116,9 +122,6 @@ void testLoop() {
             }
             break;
         case 'z':
-            break;
-        case 'f': // This is New
-            chachaAlign(default_speed, default_speed);
             break;
         default:
             Serial.print("Not a command: ");

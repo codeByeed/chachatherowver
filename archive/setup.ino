@@ -113,7 +113,7 @@ void setup() {
 
     moveForward(0, 0);
 
-    setupCalibrateSpeed();
+    // setupCalibrateSpeed();
 
     moveForward(0, 0);
 }
