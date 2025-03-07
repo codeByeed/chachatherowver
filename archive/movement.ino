@@ -224,10 +224,30 @@ void chachaAlign(float leftSpeed, float rightSpeed){ // This is new
   double degrees = (d1 + d2)/2;
 
   if(degrees > 0){
+    int yaw = degrees;
+    int yaw0 = readGyroYaw() // get rid of intial yaw
     moveRSpin();
+
+    while(true){
+      if(yaw - ((int)readGyroYaw() - yaw0)%360 <= 0){ // stop when wanted Yaw correction is acheived
+        moveRSpin(0);
+        break;
+      }
+    }
   }
+
   if(degrees < 0){
+    
+    int yaw = degrees;
+    int yaw0 = readGyroYaw()
     moveSpin();
+
+    while(true){
+      if(yaw - ((int)readGyroYaw() - yaw0)%360 >= 0){ // stop when wanted Yaw correction is acheived
+        moveSpin(0);
+        break;
+      }
+    }
   }
 
   moveBackwardByCms(leftSpeed, rightSpeed, cm);
