@@ -1,3 +1,4 @@
+
 void setupDistanceSensor(int echo, int trigger) {
     pinMode(trigger, OUTPUT);
     pinMode(echo, INPUT);
