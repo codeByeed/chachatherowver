@@ -50,7 +50,7 @@
 SoftwareSerial bluetooth(bt_tx, bt_rx);
 
 // Course Correction Constants
-static int default_speed = 100;
+static int default_speed = 120;
 static int offset_speed = 0;
 
 #define CMS_TO_TIME(D) ((D * 1000) / default_speed)

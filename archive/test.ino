@@ -41,7 +41,7 @@ void testLoop() {
         case 'f': // This is New
             Serial.println("this work");
             delay(3000);
-            chachaAlign(default_speed, default_speed);
+            chachaAlign(120, 120);
             // moveForwardByCms(120, 120, 10);
             break;
         case 'a':
